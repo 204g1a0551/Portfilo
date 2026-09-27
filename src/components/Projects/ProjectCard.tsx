@@ -1,7 +1,7 @@
 import React from 'react';
 import { Project } from '../../types';
 import { Badge } from '../UI/Badge';
-import { ExternalLink, Github, ArrowRight, ShieldAlert, Sprout, ShieldCheck, Layers } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight, ShieldAlert, Sprout, ShieldCheck, Layers, Brain, Activity, Database, FileSpreadsheet, Lock } from 'lucide-react';
 
 interface ProjectCardProps {
   project: Project;
@@ -10,10 +10,23 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) => {
   const getProjectIcon = () => {
-    if (project.id.includes('aml')) return <ShieldAlert className="w-5 h-5 text-indigo-400" />;
-    if (project.id.includes('agri')) return <Sprout className="w-5 h-5 text-emerald-400" />;
-    if (project.id.includes('ddos')) return <ShieldCheck className="w-5 h-5 text-cyan-400" />;
+    if (project.id.includes('finsight')) return <Brain className="w-5 h-5 text-cyan-400" />;
+    if (project.id.includes('health')) return <Activity className="w-5 h-5 text-emerald-400" />;
+    if (project.id.includes('aml') || project.id.includes('fraud')) return <ShieldAlert className="w-5 h-5 text-indigo-400" />;
+    if (project.id.includes('patient')) return <Database className="w-5 h-5 text-violet-400" />;
+    if (project.id.includes('agri')) return <Sprout className="w-5 h-5 text-teal-400" />;
+    if (project.id.includes('analytics') || project.id.includes('poi')) return <FileSpreadsheet className="w-5 h-5 text-amber-400" />;
+    if (project.id.includes('ddos')) return <ShieldCheck className="w-5 h-5 text-rose-400" />;
+    if (project.id.includes('password')) return <Lock className="w-5 h-5 text-blue-400" />;
     return <Layers className="w-5 h-5 text-cyan-400" />;
+  };
+
+  const getCategoryBadgeVariant = (cat: string): 'cyan' | 'indigo' | 'emerald' | 'amber' | 'neutral' => {
+    if (cat === 'Agentic AI') return 'cyan';
+    if (cat === 'Full Stack') return 'indigo';
+    if (cat === 'Java & Spring Boot') return 'amber';
+    if (cat === 'AI/ML') return 'emerald';
+    return 'neutral';
   };
 
   return (
@@ -27,7 +40,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
               {getProjectIcon()}
             </div>
             <div>
-              <Badge variant="cyan" size="sm">{project.category}</Badge>
+              <Badge variant={getCategoryBadgeVariant(project.category)} size="sm">{project.category}</Badge>
             </div>
           </div>
 
@@ -84,7 +97,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
           onClick={() => onSelect(project)}
           className="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5 group/btn transition-colors"
         >
-          <span>View Architecture &amp; Details</span>
+          <span>Architecture &amp; Details</span>
           <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
         </button>
 

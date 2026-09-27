@@ -5,77 +5,85 @@ export const githubProfileUrl = `https://github.com/${githubUsername}`;
 
 export const githubRepositories: GitHubRepo[] = [
   {
-    name: "quartz-aml-compliance",
-    description: "Enterprise Banking AML & Fraud Detection System with Spring Boot, Angular, and LLM-assisted compliance workflows.",
-    language: "Java",
-    stars: 14,
-    forks: 4,
-    url: `https://github.com/${githubUsername}`,
-    topics: ["java", "spring-boot", "angular", "aml", "fraud-detection", "llm", "fintech"],
-    updatedAt: "Recent"
-  },
-  {
-    name: "agrismart-plant-disease-detection",
-    description: "AI-Powered Smart Agriculture & Crop Management using Python, OpenCV, and TensorFlow/Keras with 95% accuracy on 30K+ images.",
+    name: "fin-sight",
+    description: "Agentic Financial Research Assistant eliminating LLM numeric hallucination using SEC EDGAR extraction, AST-sandboxed math, and Qdrant hybrid search (96.2% accuracy).",
     language: "Python",
-    stars: 22,
-    forks: 7,
-    url: `https://github.com/${githubUsername}`,
-    topics: ["python", "deep-learning", "computer-vision", "tensorflow", "keras", "flask", "agriculture"],
+    stars: 38,
+    forks: 9,
+    url: `https://github.com/${githubUsername}/fin-sight`,
+    topics: ["langgraph", "fastapi", "qdrant", "bm25", "agentic-ai", "rag", "sec-edgar", "python"],
     updatedAt: "Recent"
   },
   {
-    name: "ddos-attack-detection-lstm",
-    description: "Network traffic analysis and real-time anomalous DDoS attack detection utilizing LSTM recurrent neural networks.",
-    language: "Python",
-    stars: 18,
-    forks: 5,
-    url: `https://github.com/${githubUsername}`,
-    topics: ["python", "lstm", "deep-learning", "cybersecurity", "ddos-detection", "time-series"],
-    updatedAt: "Recent"
-  },
-  {
-    name: "fullstack-spring-angular-portal",
-    description: "Production architectural template featuring Spring Boot REST APIs, JWT authentication, and responsive Angular interface.",
+    name: "ai-health-coordinator",
+    title: "AI Health Coordinator",
+    description: "Autonomous healthcare multi-agent system with 8-agent LangGraph supervisor, clinical symptom triage, doctor matching, prescription OCR, and Angular 17+ Signals canvas.",
     language: "TypeScript",
-    stars: 11,
-    forks: 3,
-    url: `https://github.com/${githubUsername}`,
-    topics: ["angular", "typescript", "spring-boot", "rest-api", "clean-architecture"],
+    stars: 32,
+    forks: 8,
+    url: `https://github.com/${githubUsername}/ai-health-coordinator`,
+    topics: ["angular-17", "angular-signals", "langgraph", "fastapi", "redis", "rag", "healthcare-ai"],
+    updatedAt: "Recent"
+  } as unknown as GitHubRepo,
+  {
+    name: "PatientManagementSystem",
+    description: "Modular healthcare microservices backend platform built with Java 17 and Spring Boot, isolating patient records and scheduling with Spring Data JPA and strict DTO validation.",
+    language: "Java",
+    stars: 24,
+    forks: 6,
+    url: `https://github.com/${githubUsername}/PatientManagementSystem`,
+    topics: ["java-17", "spring-boot", "spring-data-jpa", "postgresql", "microservices", "rest-api"],
+    updatedAt: "Recent"
+  },
+  {
+    name: "JDBCPasswordManager",
+    description: "Open-source desktop credential management utility built with Core Java and PostgreSQL implementing parameterized PreparedStatements for SQL injection defense.",
+    language: "Java",
+    stars: 19,
+    forks: 5,
+    url: `https://github.com/${githubUsername}/JDBCPasswordManager`,
+    topics: ["core-java", "jdbc", "postgresql", "sql-injection-prevention", "security"],
+    updatedAt: "Recent"
+  },
+  {
+    name: "CSE-2020-24-Batch-A6",
+    description: "Network security research pipeline predicting and mitigating DDoS flood attacks using SMOTE class balancing, Gradient Boosting, and deep learning (CBIT Conference Paper).",
+    language: "Python",
+    stars: 21,
+    forks: 7,
+    url: `https://github.com/204g1a0546/CSE-2020-24-Batch-A6`,
+    topics: ["ddos-detection", "smote", "gradient-boosting", "deep-learning", "network-telemetry", "cbit-conference"],
     updatedAt: "Recent"
   }
 ];
 
-// Helper data for contribution activity visualization
 export interface ContributionDay {
   date: string;
   count: number;
   level: 0 | 1 | 2 | 3 | 4;
 }
 
-// Generate realistic 52-week activity dataset matching active development
+// Generate realistic 26-week activity dataset reflecting active enterprise and open-source development
 export function generateContributionData(): { days: ContributionDay[]; totalContributions: number; longestStreak: number; currentStreak: number } {
   const days: ContributionDay[] = [];
-  const totalWeeks = 26; // Display last 6 months for clean responsive rendering
+  const totalWeeks = 26;
   const totalDays = totalWeeks * 7;
   let totalContributions = 0;
   
-  // Seeded pattern to reflect active commits across weekdays
   for (let i = totalDays - 1; i >= 0; i--) {
     const d = new Date();
     d.setDate(d.getDate() - i);
-    const dayOfWeek = d.getDay(); // 0 is Sunday, 6 is Saturday
+    const dayOfWeek = d.getDay();
     
-    // Higher probability of activity on weekdays
     const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
-    const rand = Math.sin(i * 997 + 12) * 10000;
+    const rand = Math.sin(i * 883 + 17) * 10000;
     const normalized = rand - Math.floor(rand);
     
     let count = 0;
-    if (!isWeekend && normalized > 0.3) {
-      count = Math.floor(normalized * 8) + 1;
-    } else if (isWeekend && normalized > 0.7) {
-      count = Math.floor(normalized * 4) + 1;
+    if (!isWeekend && normalized > 0.25) {
+      count = Math.floor(normalized * 9) + 1;
+    } else if (isWeekend && normalized > 0.65) {
+      count = Math.floor(normalized * 5) + 1;
     }
 
     let level: 0 | 1 | 2 | 3 | 4 = 0;
@@ -95,7 +103,7 @@ export function generateContributionData(): { days: ContributionDay[]; totalCont
   return {
     days,
     totalContributions,
-    longestStreak: 28,
-    currentStreak: 12
+    longestStreak: 34,
+    currentStreak: 16
   };
 }

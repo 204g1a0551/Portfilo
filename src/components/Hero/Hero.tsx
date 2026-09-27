@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
               </span>
-              <span className="font-semibold tracking-wider uppercase">Full Stack &amp; AI Systems Engineer</span>
+              <span className="font-semibold tracking-wider uppercase">{profileData.title}</span>
             </div>
 
             {/* Main Greeting and Name */}
@@ -40,15 +40,20 @@ export const Hero: React.FC = () => {
               </h1>
               
               {/* Animated Role Cycling Subheading */}
-              <div className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-300 flex flex-wrap items-center gap-x-2 pt-1">
-                <span>Building</span>
+              <div className="text-xl sm:text-2xl md:text-3xl font-semibold text-slate-300 flex flex-wrap items-center gap-x-2 pt-1">
+                <span>Specialized in</span>
                 <RoleCycler roles={profileData.titles} />
               </div>
             </div>
 
-            {/* Description */}
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl font-normal">
-              {profileData.about}
+            {/* Tagline */}
+            <div className="p-3 rounded-xl bg-surface/80 border border-white/10 font-mono text-xs sm:text-sm text-cyan-300/90 leading-relaxed">
+              ⚡ {profileData.tagline}
+            </div>
+
+            {/* Short Introduction Paragraph */}
+            <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl font-normal">
+              Enterprise Full-Stack Software Engineer with 2+ years of experience designing, modernizing, and scaling mission-critical web applications, microservices, and applied AI systems at Tata Consultancy Services (TCS) and beyond.
             </p>
 
             {/* Action Buttons */}
@@ -57,7 +62,7 @@ export const Hero: React.FC = () => {
                 onClick={() => handleScrollTo('projects')}
                 className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 via-indigo-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-500/25 hover:shadow-cyan-500/35 transition-all duration-300 flex items-center gap-2 group"
               >
-                <span>View My Work</span>
+                <span>Explore 8 Projects</span>
                 <Sparkles className="w-4 h-4 text-cyan-200 group-hover:rotate-12 transition-transform" />
               </button>
 
@@ -84,7 +89,7 @@ export const Hero: React.FC = () => {
 
             {/* Social Icons & Coding Links */}
             <div className="flex items-center gap-4 pt-2 text-slate-400">
-              <span className="text-xs font-mono uppercase tracking-wider text-slate-400">Connect:</span>
+              <span className="text-xs font-mono uppercase tracking-wider text-slate-400">Channels:</span>
               <div className="flex items-center gap-3">
                 <a
                   href={profileData.social.github}

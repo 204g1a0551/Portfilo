@@ -2,87 +2,109 @@ import { ProfileData } from '../types';
 
 export const profileData: ProfileData = {
   name: "Mahesh Kumar Godela",
+  title: "Enterprise Full Stack Developer & AI Engineer",
+  tagline: "2+ Years Enterprise Experience · Full Stack Modernization · High-Trust Agentic Systems · 550+ DSA Problems Solved",
   titles: [
-    "Full Stack AI Engineer",
-    "Java & Spring Boot Developer",
-    "Angular Specialist",
-    "AI/ML & LLM Systems Engineer",
-    "Creative Tech Explorer"
+    "Java Full Stack Developer",
+    "Angular & Spring Boot Engineer",
+    "AI & Agentic Systems Builder",
+    "Enterprise Microservices Specialist"
   ],
   email: "maheshkumargodela@gmail.com",
   phone: "+91 79899-79634",
-  location: "Whitefield, Bengaluru, Karnataka, India",
-  about: "Full-stack engineer with 1.5+ years building production-grade enterprise features at TCS, paired with deep practical hands-on experience in applied AI/ML, computer vision, deep learning, and LLM integration. Specialized in end-to-end architecture bridging high-performance Java/Spring Boot microservices, responsive Angular user interfaces, and state-of-the-art machine learning models.",
-  objective: "Full-stack developer (Java, Spring Boot, Angular) with 1.5+ years building production features at TCS, plus applied AI/ML project experience in computer vision, deep learning, and LLM-based tools. Seeking Angular/Java Full-Stack or AI/ML Engineer roles where I can combine both skill sets to ship scalable, real-world systems.",
+  location: "Bengaluru, Karnataka, India",
+  about: "I am an Enterprise Full-Stack Software Engineer with 2+ years of experience designing, modernizing, and scaling mission-critical web applications, microservices, and applied AI systems.\n\nAt Tata Consultancy Services (TCS), I engineer banking solutions for an enterprise Anti-Money Laundering (AML) and Fraud Detection platform. My work centers on modernizing legacy C++, Spring MVC, and JSP monoliths into scalable Spring Boot REST APIs and reactive Angular SPAs, implementing enterprise Single Sign-On (SSO) with Spring Security, remediating Broken Access Control (OWASP Top 10), and integrating AWS cloud banking endpoints.\n\nBeyond enterprise banking, I specialize in Agentic AI and Advanced RAG architectures. I build production-grade intelligent systems that eliminate LLM hallucinations through deterministic calculation hierarchies, AST-sandboxed computation, and multi-agent workflow orchestration.",
+  objective: "Enterprise Full-Stack Developer & AI Engineer with 2+ years of experience engineering high-concurrency microservices with Java, Spring Boot, and reactive Angular, while pioneering high-precision Agentic AI and hybrid RAG systems that eliminate hallucinations in mission-critical domains.",
+  quickFacts: [
+    { label: "Current Company", value: "Tata Consultancy Services (TCS)" },
+    { label: "Location", value: "Bengaluru, Karnataka, India" },
+    { label: "Education", value: "B.Tech in Computer Science & Engineering (2024), Srinivasa Ramanujan Institute of Technology" },
+    { label: "Core Domains", value: "Enterprise Banking, Fintech, Healthcare AI, Agritech" },
+    { label: "Languages", value: "Java, Python, TypeScript, JavaScript, SQL, C/C++" },
+    { label: "Primary Frameworks", value: "Spring Boot, Angular (14-17+ with Signals), FastAPI, LangGraph, Spring Security" }
+  ],
   stats: [
     {
       label: "Experience",
-      value: "1.5+ Yrs",
-      detail: "Production enterprise engineering at TCS"
+      value: "2+ Yrs",
+      detail: "Enterprise modernization & banking at TCS"
     },
     {
-      label: "AML Features",
-      value: "12+",
-      detail: "Shipped across 6 agile sprints"
+      label: "DSA Mastery",
+      value: "550+",
+      detail: "Algorithmic problems solved"
     },
     {
-      label: "False Positives",
-      value: "-80%",
-      detail: "Reduced flags via risk scenarios"
+      label: "Enterprise & AI Systems",
+      value: "8+",
+      detail: "Production microservices & AI platforms"
     },
     {
-      label: "AI Accuracy",
-      value: "95%",
-      detail: "Computer vision plant disease diagnosis"
+      label: "Numeric Accuracy",
+      value: "96.2%",
+      detail: "FinSight zero-hallucination benchmark"
     }
   ],
   social: {
     github: "https://github.com/204g1a0551",
-    linkedin: "https://linkedin.com/in/mahesh-kumar-godela",
+    linkedin: "https://www.linkedin.com/in/mahesh-kumar-godela/",
     leetcode: "https://leetcode.com/u/204g1a0551",
+    portfolio: "https://204g1a0551.github.io/maheshkumargodela.github.io",
     email: "maheshkumargodela@gmail.com"
   },
   education: [
     {
-      degree: "Bachelor of Technology (B.Tech)",
+      degree: "B.Tech in Computer Science & Engineering",
       institution: "Srinivasa Ramanujan Institute of Technology",
-      location: "Anantapur, Andhra Pradesh",
+      location: "Anantapur, Andhra Pradesh, India",
       period: "2020 - 2024",
       highlights: [
-        "Specialized in Computer Science & Engineering fundamentals",
-        "Elected SARO Associate Member & Fun Committee Organizer",
-        "Organized and managed the National Technical Fest"
+        "Focused on Distributed Systems, OOP, Advanced Algorithms & System Design",
+        "Elected SARO Associate Member & Organized National Technical Fests",
+        "Coordinated departmental coding challenges and technical workshops"
       ]
     },
     {
       degree: "Intermediate (12th Class - MPC)",
       institution: "Sri Chaitanya Junior College",
-      location: "Andhra Pradesh",
+      location: "Andhra Pradesh, India",
       period: "2018 - 2020",
       highlights: [
         "Focused on Mathematics, Physics, and Chemistry",
-        "Strong foundation in analytical reasoning and problem solving"
+        "Strong foundation in quantitative analysis and analytical problem solving"
       ]
     }
   ],
   certifications: [
     {
-      name: "Claude Certified Developer",
-      issuer: "Anthropic",
-      year: "2024 - 2025",
+      name: "Google Cloud Artificial Intelligence",
+      issuer: "Google Cloud",
+      badgeUrl: "google-cloud"
+    },
+    {
+      name: "Claude Developer",
+      issuer: "Anthropic / Partner Certification",
       badgeUrl: "anthropic"
     },
     {
-      name: "AWS Certified Developer – Associate",
-      code: "DVA-C02",
-      issuer: "Amazon Web Services (AWS)",
-      year: "2024 - 2027",
+      name: "Google Gemini API Integration",
+      issuer: "Google",
+      badgeUrl: "google"
+    },
+    {
+      name: "AWS Machine Learning Fundamentals",
+      issuer: "Amazon Web Services",
       badgeUrl: "aws"
+    },
+    {
+      name: "Databricks Machine Learning Basics",
+      issuer: "Databricks",
+      badgeUrl: "databricks"
     }
   ],
   extraCurricular: [
-    "Organized and managed University Technical Fest, coordinating 10+ competitive events",
-    "Elected as SARO Associate Member to coordinate departmental technical seminars",
-    "Active Fun Committee Member, leading student culture and hackathon engagement"
+    "Organized and managed University Technical Fest, coordinating 10+ competitive hackathons and coding events",
+    "Elected as SARO Associate Member to coordinate departmental technical seminars and workshops",
+    "Conducted mock interview clinics, mentoring peers who secured positions at TCS, Infosys, and tech startups"
   ]
 };

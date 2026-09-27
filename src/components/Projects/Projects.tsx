@@ -9,31 +9,61 @@ export const Projects: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState<string>('ALL');
   const [activeModalProject, setActiveModalProject] = useState<Project | null>(null);
 
-  const filterOptions = ['ALL', 'FULL STACK', 'JAVA & SPRING BOOT', 'ANGULAR', 'AI/ML'];
+  const filterOptions = [
+    'ALL',
+    'AGENTIC AI',
+    'FULL STACK',
+    'JAVA & SPRING BOOT',
+    'ANGULAR',
+    'AI/ML & SECURITY'
+  ];
 
   const filteredProjects = useMemo(() => {
     if (selectedFilter === 'ALL') return projectsData;
+    if (selectedFilter === 'AGENTIC AI') {
+      return projectsData.filter((p) =>
+        p.category === 'Agentic AI' ||
+        p.technologies.some((t) =>
+          t.toLowerCase().includes('langgraph') ||
+          t.toLowerCase().includes('qdrant') ||
+          t.toLowerCase().includes('rag') ||
+          t.toLowerCase().includes('gemini')
+        )
+      );
+    }
     if (selectedFilter === 'FULL STACK') {
-      return projectsData.filter((p) => p.category === 'Full Stack');
+      return projectsData.filter((p) =>
+        p.category === 'Full Stack' ||
+        p.technologies.some((t) => t.toLowerCase().includes('angular') || t.toLowerCase().includes('spring'))
+      );
     }
     if (selectedFilter === 'JAVA & SPRING BOOT') {
       return projectsData.filter((p) =>
-        p.technologies.some((t) => t.toLowerCase().includes('java') || t.toLowerCase().includes('spring'))
+        p.technologies.some((t) =>
+          t.toLowerCase().includes('java') ||
+          t.toLowerCase().includes('spring') ||
+          t.toLowerCase().includes('jdbc') ||
+          t.toLowerCase().includes('poi')
+        )
       );
     }
     if (selectedFilter === 'ANGULAR') {
       return projectsData.filter((p) =>
-        p.technologies.some((t) => t.toLowerCase().includes('angular'))
+        p.technologies.some((t) => t.toLowerCase().includes('angular') || t.toLowerCase().includes('signals'))
       );
     }
-    if (selectedFilter === 'AI/ML') {
+    if (selectedFilter === 'AI/ML & SECURITY') {
       return projectsData.filter((p) =>
         p.category === 'AI/ML' ||
+        p.category === 'Security' ||
+        p.category === 'Agentic AI' ||
         p.technologies.some((t) =>
           t.toLowerCase().includes('ai') ||
           t.toLowerCase().includes('ml') ||
-          t.toLowerCase().includes('tensor') ||
-          t.toLowerCase().includes('lstm')
+          t.toLowerCase().includes('opencv') ||
+          t.toLowerCase().includes('scikit') ||
+          t.toLowerCase().includes('smote') ||
+          t.toLowerCase().includes('security')
         )
       );
     }
@@ -44,9 +74,9 @@ export const Projects: React.FC = () => {
     <section id="projects" className="py-20 relative bg-surface/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          badge="Featured Engineering"
-          title="Engineered Projects"
-          subtitle="Real-world production systems and deep learning models demonstrating end-to-end full stack architecture and applied AI."
+          badge="Production &amp; Research"
+          title="Featured Projects"
+          subtitle="Enterprise banking modernization, high-trust agentic AI architectures, reactive Angular applications, and cloud microservices."
         />
 
         {/* Filter Buttons Bar */}

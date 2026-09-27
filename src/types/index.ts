@@ -7,7 +7,7 @@ export interface Project {
   solution: string;
   metrics: string[];
   technologies: string[];
-  category: 'Full Stack' | 'Java & Spring Boot' | 'Angular' | 'AI/ML' | 'Security';
+  category: 'Full Stack' | 'Java & Spring Boot' | 'Angular' | 'AI/ML' | 'Security' | 'Agentic AI';
   githubUrl?: string;
   liveUrl?: string;
   highlights: string[];
@@ -47,7 +47,7 @@ export interface Certification {
   name: string;
   issuer: string;
   code?: string;
-  year: string;
+  year?: string;
   badgeUrl?: string;
   verifyUrl?: string;
 }
@@ -73,17 +73,21 @@ export interface GitHubRepo {
 
 export interface ProfileData {
   name: string;
+  title: string;
+  tagline: string;
   titles: string[];
   email: string;
   phone: string;
   location: string;
   about: string;
   objective: string;
+  quickFacts: { label: string; value: string }[];
   stats: { label: string; value: string; detail: string }[];
   social: {
     github: string;
     linkedin: string;
     leetcode: string;
+    portfolio?: string;
     email: string;
   };
   education: Education[];

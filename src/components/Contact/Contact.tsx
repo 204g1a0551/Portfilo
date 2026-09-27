@@ -113,13 +113,13 @@ export const Contact: React.FC = () => {
 
             {/* Social Cards */}
             <div className="p-5 glass-card rounded-2xl border border-white/10">
-              <div className="text-xs font-mono text-slate-400 uppercase mb-3">Professional Profiles</div>
-              <div className="flex flex-col sm:flex-row gap-3">
+              <div className="text-xs font-mono text-slate-400 uppercase mb-3">Professional Profiles &amp; Links</div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 <a
                   href={profileData.social.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 p-3 rounded-xl bg-surface/80 hover:bg-surface border border-white/5 hover:border-cyan-500/30 flex items-center justify-between transition-colors"
+                  className="p-3 rounded-xl bg-surface/80 hover:bg-surface border border-white/5 hover:border-cyan-500/30 flex items-center justify-between transition-colors"
                 >
                   <div className="flex items-center gap-2 text-xs font-semibold text-white">
                     <Linkedin className="w-4 h-4 text-cyan-400" />
@@ -132,7 +132,7 @@ export const Contact: React.FC = () => {
                   href={profileData.social.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 p-3 rounded-xl bg-surface/80 hover:bg-surface border border-white/5 hover:border-cyan-500/30 flex items-center justify-between transition-colors"
+                  className="p-3 rounded-xl bg-surface/80 hover:bg-surface border border-white/5 hover:border-cyan-500/30 flex items-center justify-between transition-colors"
                 >
                   <div className="flex items-center gap-2 text-xs font-semibold text-white">
                     <Github className="w-4 h-4 text-slate-300" />
@@ -140,6 +140,21 @@ export const Contact: React.FC = () => {
                   </div>
                   <ExternalLink className="w-3.5 h-3.5 text-slate-500" />
                 </a>
+
+                {profileData.social.portfolio && (
+                  <a
+                    href={profileData.social.portfolio}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-xl bg-surface/80 hover:bg-surface border border-white/5 hover:border-cyan-500/30 flex items-center justify-between transition-colors sm:col-span-2"
+                  >
+                    <div className="flex items-center gap-2 text-xs font-semibold text-white">
+                      <ExternalLink className="w-4 h-4 text-emerald-400" />
+                      <span>Portfolio: {profileData.social.portfolio.replace('https://', '')}</span>
+                    </div>
+                    <ExternalLink className="w-3.5 h-3.5 text-slate-500" />
+                  </a>
+                )}
               </div>
             </div>
 

@@ -2,79 +2,109 @@ import { Experience } from '../types';
 
 export const experienceData: Experience[] = [
   {
-    id: "tcs-full-stack-ai",
+    id: "tcs-app-developer",
     company: "Tata Consultancy Services (TCS)",
-    role: "Full Stack AI Engineer",
-    location: "Whitefield, Bengaluru, Karnataka",
+    role: "Application Developer (Angular / Java Full Stack)",
+    location: "Bengaluru, Karnataka, India",
     period: "Feb 2025 — Present",
-    type: "Full-time Enterprise",
-    summary: "Spearheading end-to-end development of enterprise Anti-Money Laundering (AML) and fraud detection banking platforms using Java, Spring Boot, Angular, and applied AI models.",
+    type: "Enterprise Full-Time",
+    summary: "Spearheading full-stack modernization of an enterprise Anti-Money Laundering (AML) and Fraud Detection platform, migrating legacy Spring, C++, and JSP monoliths into scalable Spring Boot microservices and reactive Angular SPAs.",
     technologies: [
       "Java",
       "Spring Boot",
-      "Angular",
-      "REST APIs",
-      "LLMs & GenAI",
-      "Random Forest",
-      "PostgreSQL",
-      "Docker",
-      "Git"
+      "Angular (v14-17+)",
+      "Spring Security (SSO/RBAC)",
+      "RESTful APIs",
+      "C++",
+      "AWS Cloud Banking",
+      "Gemini LLM API",
+      "OWASP Security"
     ],
     responsibilities: [
-      "Developed and enhanced AML and fraud detection features using Java, Spring Boot, Angular, and REST APIs, shipping 12+ features/releases across 6 sprints.",
-      "Implemented 12 AML risk scenarios to identify suspicious customer activities and potential fraud, reducing false-positive flags by 80%.",
-      "Integrated an LLM-powered chatbot to assist compliance officers with AML workflows, cutting average query resolution time by 60%.",
-      "Worked on Random Forest-based risk analysis for customer risk assessment, improving model precision/recall to 78%.",
-      "Fixed 60+ defects and developed 18 APIs, handling frontend-backend integration and core application enhancements.",
-      "Performed proactive debugging, testing, and issue analysis, boosting application reliability and reducing production incidents by 50%.",
-      "Provided technical support and knowledge transfer to 10 new team members, accelerating their onboarding into enterprise delivery pipelines.",
-      "Engineered and integrated high-throughput REST APIs across multiple banking screens with Angular and Spring Boot for reliable data flow."
+      "Spearheaded full-stack modernization of an enterprise Anti-Money Laundering (AML) platform, migrating legacy Spring, C++, and JSP architectures into scalable Spring Boot microservices and an Angular SPA.",
+      "Engineered Single Sign-On (SSO) authentication using Spring Security and fortified application defenses against Broken Access Control (OWASP Top 10) through Angular Route Guards and backend authorization.",
+      "Integrated an intelligent AI chatbot powered by LLM APIs to assist compliance analysts with real-time transaction lookups, anomaly queries, and automated alert triage.",
+      "Developed Angular service layers consuming cloud banking APIs deployed on AWS for asynchronous transaction batch processing and secure audit reporting."
     ],
     achievements: [
-      "Reduced false-positive risk flags by 80% through tailored transaction risk scenarios",
-      "Achieved 60% reduction in query turnaround time with LLM workflow assistance",
-      "Cut production incidents by 50% through rigorous debugging and API stabilization",
-      "Delivered 12+ enterprise features across 6 consecutive sprint releases"
+      "Successfully decommissioned legacy JSP/C++ bottlenecks, delivering responsive Angular SPAs and modular Spring Boot REST endpoints",
+      "Eliminated Broken Access Control risks with robust Spring Security RBAC and Angular route guards",
+      "Empowered compliance investigators with an integrated LLM diagnostic assistant for rapid alert triage",
+      "Architected reliable AWS cloud banking API integrations for large batch transaction processing"
     ],
     metrics: [
-      { label: "False Positive Reduction", value: "80%" },
-      { label: "Query Resolution Speedup", value: "60%" },
-      { label: "Sprint Releases Shipped", value: "12+ Features" },
-      { label: "Defects Resolved", value: "60+" }
+      { label: "Monolith Migration", value: "Spring Boot & Angular" },
+      { label: "Security Hardening", value: "SSO & RBAC (OWASP)" },
+      { label: "AI Integration", value: "LLM Compliance Chatbot" },
+      { label: "Cloud Services", value: "AWS Banking APIs" }
     ]
   },
   {
-    id: "srit-technical-trainer",
-    company: "Srinivasa Ramanujan Institute of Technology",
-    role: "Technical Trainer",
-    location: "Anantapur, Andhra Pradesh",
-    period: "Jun 2024 — Jan 2025",
-    type: "Academic / Technical Mentorship",
-    summary: "Led comprehensive hands-on programming bootcamps and project mentorship for engineering students, specializing in Python, Java, Data Structures, and Django web architecture.",
+    id: "freelance-software-consultant",
+    company: "Independent Engineering",
+    role: "Freelance Software Engineer & Technical Consultant",
+    location: "Remote",
+    period: "Apr 2026 — Present",
+    type: "Consulting & Contract",
+    summary: "Delivering modern frontend state architectures, Core Java enterprise analytics pipelines, and technical leadership across applied machine learning projects.",
     technologies: [
+      "Angular Signals",
+      "TypeScript",
+      "Reactive Forms",
+      "Go (Golang)",
+      "Core Java",
+      "Java TimeZone/NIO",
       "Python",
-      "Java",
-      "Django",
-      "REST APIs",
-      "Data Structures & Algorithms",
-      "SQL",
-      "Git"
+      "Machine Learning"
     ],
     responsibilities: [
-      "Conducted technical training sessions on Python, Java, and programming fundamentals for 500+ engineering students.",
-      "Guided students in problem-solving, algorithmic thinking, and fundamental data structures, with 90% reporting improved coding proficiency.",
-      "Assisted students with hands-on coding exercises and project development, mentoring 200 student projects to successful completion.",
-      "Trained students in Django for full-stack web application development, covering models, views, templates, and REST API basics, guiding them through end-to-end mini-project implementations."
+      "Modernized frontend state architecture to Angular Signals and built dynamic multi-step Reactive Forms interfacing with Go (Golang) microservices.",
+      "Developed a Core Java enterprise data analytics module utilizing Java System and TimeZone APIs to automate dynamic locale-specific reporting and file generation across German and Indian environments.",
+      "Coordinated a 3-4 member developer team delivering applied machine learning systems, including crop disease detection and medical imaging classification."
     ],
     achievements: [
-      "Mentored and guided 200 student software projects through complete delivery",
-      "90% of 500+ students reported measurable gains in coding proficiency and interview readiness",
-      "Designed real-world curriculum bridging algorithmic problem solving and web development"
+      "Refactored complex UI components to fine-grained Angular Signals, improving client rendering performance",
+      "Engineered dynamic locale and timezone-aware Core Java reporting pipeline used across multi-region teams",
+      "Mentored and guided cross-functional team delivery of healthcare and agritech deep learning systems"
+    ],
+    metrics: [
+      { label: "State Architecture", value: "Angular Signals" },
+      { label: "Backend Modules", value: "Core Java & Go" },
+      { label: "Team Leadership", value: "3-4 Engineers" },
+      { label: "Domain Scope", value: "Analytics & ML" }
+    ]
+  },
+  {
+    id: "srit-technical-mentor",
+    company: "Srinivasa Ramanujan Institute of Technology",
+    role: "Technical Mentor & Programming Instructor",
+    location: "Anantapur, Andhra Pradesh, India",
+    period: "2024",
+    type: "Technical Mentorship",
+    summary: "Conducted high-impact technical training, system design clinics, and competitive coding bootcamps for undergraduate engineers.",
+    technologies: [
+      "Core Java",
+      "Python",
+      "C++",
+      "Django",
+      "OOP & Design Patterns",
+      "Data Structures & Algorithms",
+      "SQL"
+    ],
+    responsibilities: [
+      "Conducted interactive technical training sessions covering Core Java, Python, C++, Django, Object-Oriented Programming (OOP), and Data Structures for undergraduate engineers.",
+      "Guided student cohorts through laboratory coding challenges, system design clinics, and end-to-end project implementations.",
+      "Organized hackathons and mock technical interviews, directly contributing to students securing software engineering placements at firms including TCS and Infosys."
+    ],
+    achievements: [
+      "Directly contributed to students securing tier-1 software engineering placements at TCS, Infosys, and startups",
+      "Mentored hundreds of engineering students in algorithmic problem solving and web application architecture",
+      "Organized college-wide hackathons and competitive programming challenges"
     ],
     metrics: [
       { label: "Students Trained", value: "500+" },
-      { label: "Projects Mentored", value: "200" },
-      { label: "Proficiency Uplift", value: "90%" }
+      { label: "Student Placements", value: "TCS, Infosys & More" },
+      { label: "Core Topics", value: "Java, Python, C++, DSA" }
     ]
   }
 ];
