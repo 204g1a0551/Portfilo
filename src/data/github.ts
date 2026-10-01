@@ -27,12 +27,12 @@ export const githubRepositories: GitHubRepo[] = [
   } as unknown as GitHubRepo,
   {
     name: "PatientManagementSystem",
-    description: "Modular healthcare microservices backend platform built with Java 17 and Spring Boot, isolating patient records and scheduling with Spring Data JPA and strict DTO validation.",
+    description: "Distributed healthcare platform with 5 decoupled microservices (Gateway, Auth, Patient, Billing, Analytics) built with Java 21, Spring Boot 3, gRPC, Apache Kafka, PostgreSQL, and Docker Compose.",
     language: "Java",
-    stars: 24,
-    forks: 6,
+    stars: 28,
+    forks: 7,
     url: `https://github.com/${githubUsername}/PatientManagementSystem`,
-    topics: ["java-17", "spring-boot", "spring-data-jpa", "postgresql", "microservices", "rest-api"],
+    topics: ["java-21", "spring-boot-3", "spring-cloud-gateway", "grpc", "protobuf", "apache-kafka", "microservices", "postgresql", "docker-compose"],
     updatedAt: "Recent"
   },
   {

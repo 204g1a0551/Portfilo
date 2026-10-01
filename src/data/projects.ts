@@ -120,39 +120,50 @@ export const projectsData: Project[] = [
   },
   {
     id: "patient-management-system",
-    title: "Patient Management System (Microservices)",
-    shortDescription: "Modular healthcare microservices backend built with Java 17 and Spring Boot featuring strict DTO validation, JPA persistence, and transactional integrity.",
-    fullDescription: "A modular healthcare microservices backend platform built with Java 17 and Spring Boot. Isolates patient demographics, clinical records, and consultation schedules into decoupled services with strict DTO validation, custom exception hierarchies, and transactional database persistence.",
-    problem: "Monolithic healthcare records systems suffer from cascading data corruption, high coupling between scheduling and medical records, and unstandardized API response structures.",
-    solution: "Architected a decoupled microservices architecture in Java 17 and Spring Boot with Spring Data JPA. Enforced strict contract-first DTO validations, centralized GlobalExceptionHandler patterns, and transactional isolation across PostgreSQL schemas.",
+    title: "Patient Management System — Distributed Microservices Platform",
+    shortDescription: "Distributed healthcare platform of 5 decoupled microservices using Java 21, Spring Boot 3, Spring Cloud Gateway, gRPC/Protobuf inter-service RPC, Kafka event streaming, and Docker Compose.",
+    fullDescription: "A production-grade distributed healthcare microservices platform composed of 5 decoupled services (API Gateway, Auth, Patient, Billing, Analytics) built with Java 21 and Spring Boot 3. Features high-throughput gRPC/Protocol Buffers synchronous RPC between Patient and Billing services to eliminate serialization overhead, asynchronous domain event streaming via Apache Kafka for patient lifecycle tracking, Spring Cloud Gateway perimeter security with stateless JWT RBAC, and containerized PostgreSQL Database-per-Service persistence.",
+    problem: "Monolithic healthcare architectures suffer from serialization latency on internal REST calls, coupling between transactional records and analytics, single points of failure in auth/routing, and database contention across domains.",
+    solution: "Architected a distributed system of 5 decoupled microservices using Java 21 and Spring Boot 3. Integrated gRPC and Protocol Buffers for low-latency synchronous inter-service communication, established asynchronous domain event streaming with Apache Kafka for zero-loss analytics, centralized perimeter routing and JWT verification in Spring Cloud Gateway, and containerized isolated PostgreSQL instances with Docker Compose.",
     metrics: [
-      "Java 17 & Spring Boot Microservices",
-      "Strict DTO & Hibernate JPA Persistence",
-      "Centralized Exception Handling & Validation",
-      "Enterprise PostgreSQL Schema Isolation"
+      "5 Decoupled Microservices (Gateway, Auth, Patient, Billing, Analytics)",
+      "gRPC & Protobuf High-Throughput Inter-Service RPC",
+      "Apache Kafka Asynchronous Event Streaming",
+      "Spring Cloud Gateway & Stateless JWT (RBAC)",
+      "Database-per-Service Pattern on PostgreSQL",
+      "Full Containerization via Docker & Compose"
     ],
     technologies: [
-      "Java 17",
-      "Spring Boot",
+      "Java 21",
+      "Spring Boot 3",
+      "Spring Cloud Gateway",
+      "gRPC",
+      "Protocol Buffers",
+      "Apache Kafka",
+      "Spring Security",
+      "JWT",
       "Spring Data JPA",
-      "REST APIs",
       "PostgreSQL",
-      "Maven",
-      "Hibernate"
+      "Docker & Compose",
+      "Maven"
     ],
     category: "Java & Spring Boot",
     githubUrl: "https://github.com/204g1a0551/PatientManagementSystem",
+    featured: true,
     highlights: [
-      "Decoupled microservice architecture isolating patient demographics, records, and appointments",
-      "Implemented strict request/response DTO validation using Jakarta validation annotations",
-      "Built centralized GlobalExceptionHandler ensuring standard RFC 7807 problem details",
-      "Optimized Hibernate JPA queries and relational indices on PostgreSQL"
+      "Architected 5 decoupled microservices: API Gateway, Auth, Patient, Billing, and Analytics using Java 21 & Spring Boot 3",
+      "Integrated gRPC & Protocol Buffers between Patient and Billing services, reducing serialization overhead and payload size",
+      "Engineered asynchronous event-driven architecture using Apache Kafka to stream patient lifecycle events to Analytics with zero data loss",
+      "Secured edge routing and access control via Spring Cloud Gateway with Spring Security and stateless JWT verification (RBAC)",
+      "Designed persistent data layers with Spring Data JPA/Hibernate and PostgreSQL adhering to the Database-per-Service pattern",
+      "Containerized all microservices and middleware (Kafka broker, Postgres instances) using Docker Compose"
     ],
     architecture: [
-      "API Controller Layer: Versioned RESTful endpoints with OpenAPI/Swagger documentation",
-      "Service & Business Logic: Domain-driven service interfaces with declarative `@Transactional` boundaries",
-      "Data Access Layer: Spring Data JPA repositories with custom JPQL queries and pagination",
-      "Database: Relational PostgreSQL schema with foreign key constraints and audit timestamps"
+      "Edge Gateway & Security: Spring Cloud Gateway acting as single entry point / reverse proxy with centralized JWT validation, rate limiting, and RBAC routing",
+      "Synchronous RPC Layer: High-performance gRPC and Protocol Buffers binary communication between Patient and Billing microservices for low-latency calls",
+      "Asynchronous Event Pipeline: Apache Kafka broker streaming patient registration and lifecycle events to dedicated Analytics consumers without blocking transactions",
+      "Domain Services: Java 21 & Spring Boot 3 microservices (Patient, Billing, Auth, Analytics) with strict DTO validation and custom exception hierarchies",
+      "Persistence & Containerization: Dedicated PostgreSQL database per service (Database-per-Service pattern), fully containerized via Docker & Docker Compose"
     ]
   },
   {
