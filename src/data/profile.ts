@@ -36,7 +36,7 @@ export const profileData: ProfileData = {
     },
     {
       label: "Enterprise & AI Systems",
-      value: "8+",
+      value: "9+",
       detail: "Production microservices & AI platforms"
     },
     {

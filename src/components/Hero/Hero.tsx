@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
                 onClick={() => handleScrollTo('projects')}
                 className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 via-indigo-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-500/25 hover:shadow-cyan-500/35 transition-all duration-300 flex items-center gap-2 group"
               >
-                <span>Explore 8 Projects</span>
+                <span>Explore 9 Projects</span>
                 <Sparkles className="w-4 h-4 text-cyan-200 group-hover:rotate-12 transition-transform" />
               </button>
 

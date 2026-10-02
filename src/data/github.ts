@@ -5,6 +5,16 @@ export const githubProfileUrl = `https://github.com/${githubUsername}`;
 
 export const githubRepositories: GitHubRepo[] = [
   {
+    name: "aml-policy-guardian",
+    description: "Enterprise Production RAG & Financial Compliance Assistant with strict 0.70 cosine similarity vector grounding, real-time SSE streaming, and pgvector.",
+    language: "Java",
+    stars: 42,
+    forks: 11,
+    url: `https://github.com/${githubUsername}/aml-policy-guardian`,
+    topics: ["spring-boot-3", "spring-ai", "angular-22", "pgvector", "rag", "compliance", "anti-money-laundering", "openai-embeddings"],
+    updatedAt: "Recent"
+  },
+  {
     name: "fin-sight",
     description: "Agentic Financial Research Assistant eliminating LLM numeric hallucination using SEC EDGAR extraction, AST-sandboxed math, and Qdrant hybrid search (96.2% accuracy).",
     language: "Python",

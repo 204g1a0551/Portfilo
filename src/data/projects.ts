@@ -2,6 +2,54 @@ import { Project } from '../types';
 
 export const projectsData: Project[] = [
   {
+    id: "aml-policy-guardian",
+    title: "AML Policy Guardian — Enterprise Production RAG & Compliance Assistant",
+    shortDescription: "Enterprise-hardened RAG system for Tier-1 Financial Intelligence Units (FIU) with strict 0.70 cosine similarity vector grounding, real-time SSE streaming, PII masking, and pgvector.",
+    fullDescription: "A production-grade, enterprise-hardened Retrieval-Augmented Generation (RAG) system engineered for Tier-1 Financial Intelligence Units (FIU) and banking compliance officers. Automates policy interpretation, SAR/CTR escalation workflows, transaction structuring detection, and regulatory cross-referencing against approved banking policies with strict mathematical grounding, deterministic guardrails, and cryptographic provenance.",
+    problem: "Compliance analysts in Tier-1 banking face high risk of regulatory non-compliance from hallucinated AI responses, sensitive customer PII leakage, slow document indexing across complex regulatory PDFs, and adversarial prompt injections.",
+    solution: "Engineered an enterprise Spring Boot 3.4 & Spring AI 1.0 architecture with pgvector enforcing a strict 0.70 cosine similarity floor and automatic refusal guardrails for sub-threshold claims. Integrated real-time SSE streaming with REST fallback, Apache Tika document parsing with section (§) preservation, automated PII sanitization ([REDACTED-SSN], [REDACTED-CARD-PAN]), and multi-stage Docker deployment.",
+    metrics: [
+      "100.0% (34/34) RAG Benchmark Pass Rate",
+      "100% Measured Retrieval Relevance & Groundedness",
+      "20.7 ms Mean Retrieval & Synthesis Latency",
+      "Hard 0.70 Cosine Similarity Vector Threshold",
+      "126 Spring Boot Integration Tests + 15 Angular Specs",
+      "Automated PII Masking & Injection Defense"
+    ],
+    technologies: [
+      "Java 21",
+      "Spring Boot 3.4",
+      "Spring AI 1.0",
+      "Angular 22",
+      "TypeScript",
+      "PostgreSQL 16",
+      "pgvector",
+      "Apache Tika",
+      "OpenAI Embeddings",
+      "Gemini 2.5 / GPT-4o",
+      "Docker",
+      "AWS (EC2/RDS/S3)"
+    ],
+    category: "Full Stack",
+    githubUrl: "https://github.com/204g1a0551/aml-policy-guardian",
+    featured: true,
+    highlights: [
+      "100% pass rate (34/34) on enterprise RAG benchmark evaluation across direct, multi-doc, and adversarial prompts",
+      "Deterministic 0.70 cosine similarity threshold in pgvector with authoritative policy refusal guardrails",
+      "Real-time Server-Sent Events (SSE) streaming with 60s watchdog timeouts and automatic REST fallback",
+      "Multi-stage document extraction (Apache Tika) across PDF/DOCX with section (§) and page boundary tracking",
+      "Financial-grade security: Regex PII redaction ([REDACTED-SSN]), canary token leak blocking, and rate limiting",
+      "126 Spring Boot integration tests + 15 Angular unit specs passing with zero errors"
+    ],
+    architecture: [
+      "Angular 22 Presentation Tier: Reactive SSE client streaming sub-word tokens with client cancellation and token meters",
+      "Spring Boot 3.4 & Spring AI Core: Stateful orchestration gateway, sliding-window rate limiters, and PII masking pipeline",
+      "Vector & Knowledge Store: PostgreSQL 16 + pgvector storing 1536-dim embeddings with HNSW indices and hard similarity floors",
+      "Document Ingestion Engine: Apache Tika OCR pipeline normalizing multi-format banking circulars with section boundary preservation",
+      "Cloud Infrastructure: Multi-stage non-root Docker containers deployed across AWS EC2, private RDS PostgreSQL, and S3 VPC endpoints"
+    ]
+  },
+  {
     id: "finsight-agentic-finance",
     title: "FinSight — Agentic Financial Research Assistant",
     shortDescription: "High-trust agentic financial intelligence platform eliminating LLM numeric hallucinations in equity research via AST sandboxed execution and SEC EDGAR grounding.",
